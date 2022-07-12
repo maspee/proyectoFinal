@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %} Editar Prescripción {% endblock %}
+
+{% block contenido %}  
+
+    <div class="card">
+        <div class="card-header">
+            Editar información de tu prescripción médica
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos de prescripción</h4>
+            {% include 'crud/form.html' %}
+
+        </div>
+        <div class="card-footer text-muted">
+            
+        </div>
+    </div>
+
+{% endblock %}

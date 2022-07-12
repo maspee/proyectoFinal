@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %}  
+   <div class="p-5 bg-light">
+    <div class="container">
+        <h1 class="display-3">Bienvenidos a Monitor de Prescripción Médica</h1>
+        <p class="lead">Registrate en el sitio, ingresa los datos de un adulto mayor y lo llamamos en el horario que debe tomar sus medicamentos.</p>
+        <hr class="my-2">   
+        <div class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'registro' %}" role="button">Registrate</a> 
+        </div>   
+    </div>
+   </div>
+   <br><br>
+   
+   <div class="p-5 bg-light">
+    <div class="container">
+        <h3 class="">Requerimientos de este servicio:</h3>
+        <p class="lead">Tener registro de vecino.</p>
+        <p class="lead">Solo usuarios registrados podran ingresar prescripciones médicas.</p>
+        <p class="lead">Prescripciones médicas firmadas.</p>
+        <p class="lead">En la descripción recuerda ingresar los horarios que el paciente debe tomar sus medicamentos.</p>
+        <hr class="my-2">   
+    </div>
+   </div>
+{% endblock %}  

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %} Agregar prescripción {% endblock %}
+
+{% block contenido %}  
+    <div class="card">
+        <div class="card-header">
+            Ingresar prescripción médica
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos de la prescripción médica</h4>
+            {% include 'crud/form.html' %}
+
+        </div>    
+    </div>
+{% endblock %}

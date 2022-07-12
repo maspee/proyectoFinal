@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Contáctanos {% endblock %}
+{% block contenido %}
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'publicacion_nueva' %}" role="button">Agregar Publicación</a> 
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Agrega tus comentarios</h4>
+            <tbody>                    
+                {% for i in posts %}            
+                    <div class="post">
+                        <div class="date">
+                            <a class="mr-2" href="#">{{i.autor}}</a> {{i.fecha_publicacion}}
+                        </div> 
+                        <h2><a class="mr-2" href="{% url 'publicacion_detalle' pk=i.pk %}">{{i.titulo}}</a></h2>
+                        <!--<p>{{ i.texto | linebreaksbr }}</p>--><br>           
+                    </div>
+                {% endfor %}
+            </tbody>
+    </div>    
+</div>    
+{% endblock %}
+
+<div class="card-header">
+    <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar tu Receta</a> 
+</div>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block titulo %} Perfil {% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4>Página de perfil</h4> 
+        </div>
+        <div class="card-body">    
+            <div class="content-section">
+                <h2>Usuario conectado</h2>
+                <p>{{user.username}}</p>
+            </div>    
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block titulo %} Lista de Prescripciones Médicas{% endblock %}
+
+{% block contenido %}  
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar prescripción</a> 
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Prescripciones médicas cargadas</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for receta in recetas %}
+                <tr>
+                    <td>{{ receta.id }}</td>
+                    <td><img src="{{receta.imagen.url}}" height="100"/></td>
+                    <td>{{ receta.nombre }}</td>
+                    <td>{{ receta.descripcion}}</td>
+                   
+                    <td> 
+                        <a name="" id="" class="btn btn-info" href="{% url 'editar' receta.id %}" role="button">Editar</a>  
+                        |   
+                        <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' receta.id %}" role="button">Borrar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>  
+</div>
+    
+{% endblock %}
